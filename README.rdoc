@@ -1,28 +1,36 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+heroku link:
+github link:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Code Challenge:
+
+Description
+Create an application in which a user can post a comment to a wall and read other user
+comments posted to the wall. Feel free to keep the application as simple as possible.
+Technical Specifications
+● Overall Requirements
+○ Completed in the LAMP stack
+● Submission Requirements
+○ The application must include fields for accepting a name, email, website, and
+comment.
+○ The name and comments fields are required and the user must be alerted if any
+of them aren’t filled in upon submission.
+○ Submitted comments should show up on the wall without a page refresh.
+● Comment Listing Requirements
+○ By default, list submitted comments in descending order above the comment
+submission form.
+○ Comment listings should include name, comment, gravatar based on user
+submitted email, and time submitted.
+○ If there is not a user submitted email, do not display an image next to the
+comment at all.
+○ If the user user submits an email address, their displayed name should be a
+mailto link to their email address.
+○ If the user submits a website, their displayed name should be a link to the website
+with a target “_blank” attribute.
+○ If a user submits a name and an email address, their displayed name should be a
+link to the website with a “_target” blank attribute.
+○ Allow the user to sort the comments posted to the wall by date submitted
+descending or ascending.
+● Non Requirements
+○ Comments do not need to be approved before being posted to the wall.
+○ The submission form and the comment wall do not need to be styled.

@@ -1,10 +1,15 @@
 class CommentsController < ApplicationController
 
   def index
-
+    comments = Comment.all
+    render json: comments
   end
 
-  def show
+
+  def create
+    comment = Comment.new(name: params["name"], email: params["email"], website: params["website"], comment: params["comment"])
+    comment.save
+    render :nothing => true
 
   end
 

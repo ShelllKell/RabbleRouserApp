@@ -2,13 +2,30 @@
 <html>
 <head>
   <title>Rabblerouser</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+
+<h1>Rabble+Rouser Comment Wall!</h1>
+<form>
+  <input type="text" id="name" value="name">
+  <br>
+  <input type="text" id="email" value="email">
+  <br>
+  <input type="text" id="website" value="website">
+  <br>
+  <input type="text" id="comment" value="comment">
+  <br>
+  <button>Submit Comment</button>
+</form>
+
+<div class="line"></div><h2>Comments:</h2>
+
+<ul id="comment-list"></ul>
 
 </body>
 </html>
