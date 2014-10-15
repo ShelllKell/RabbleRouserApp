@@ -21,7 +21,22 @@ $(document).ready(function () {
       commentArr.reverse();
     }
     for (i = 0; i < commentArr.length; i++) {
-      $('#comment-list').append('<li>' + commentArr[i].name + " " + commentArr[i].email + " " + commentArr[i].website + " " + commentArr[i].comment + '</li>')
+      var name = "";
+      if(commentArr[i].website != "") {
+        name = name + "<a href="+ commentArr[i].website + " target='_blank'>" + commentArr[i].name + "</a>"
+      }
+      else if(commentArr[i].email != "") {
+        name = name + "<a href=mailto:" + commentArr[i].email + " target='_blank'>" + commentArr[i].name + "</a>"
+      }
+
+
+      $('#comment-list').append('<li>' +
+        name + " " +
+        commentArr[i].email + " " +
+        commentArr[i].website + " " +
+        commentArr[i].comment + " " +
+        Date.parse(commentArr[i].created_at) +
+        '</li>')
     }
   };
 
