@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
   def index
-    comments = Comment.all
+    comments = Comment.order("created_at DESC")
     render json: comments
   end
 
