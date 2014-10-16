@@ -43,3 +43,7 @@ ul {
     height: 1px;
     margin-top: 5%;
 }
+
+.flash {
+    display: none;
+}
