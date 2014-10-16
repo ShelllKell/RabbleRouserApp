@@ -1,5 +1,5 @@
-heroku link:
-github link:
+heroku link: 
+github link: https://github.com/ShelllKell/RabbleRouserApp
 
 
 Code Challenge:
