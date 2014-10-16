@@ -8,6 +8,10 @@ $(document).ready(function () {
 
   var reverse = false;
 
+//  var gravatar = CryptoJS.MD5("Message");
+//  console.log(hash.toString());
+
+
   var getComments = function() {
     var commentJson = $.get("/comments");
     commentJson.success(function(jsonResponse){
@@ -29,13 +33,18 @@ $(document).ready(function () {
         name = name + "<a href=mailto:" + commentArr[i].email + " target='_blank'>" + commentArr[i].name + "</a>"
       }
 
+      var gravatar = "";
+      if(commentArr[i].gravatar_hash != null) {
+        gravatar = gravatar + '<img src="http://www.gravatar.com/avatar/' + commentArr[i].gravatar_hash + '">'
+      }
 
       $('#comment-list').append('<li>' +
-        name + " " +
+        '<li>' + name + '</li>' + " " +
         commentArr[i].email + " " +
         commentArr[i].website + " " +
         commentArr[i].comment + " " +
         Date.parse(commentArr[i].created_at) +
+        gravatar +
         '</li>')
     }
   };
@@ -66,4 +75,7 @@ $(document).ready(function () {
 
 
 });
+
+
+
 
